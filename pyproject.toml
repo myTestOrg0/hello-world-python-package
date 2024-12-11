@@ -1,6 +1,6 @@
 [project]
 name = "cool-lib-forked-1"
-version = "1.8"
+version = "1.9"
 description = "simplest example in the python world"
 license = { text="MIT" }
 dependencies = []
