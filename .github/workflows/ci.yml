@@ -25,8 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install build twine@6.0.1
-
+          pip install build twine
       - name: Build the package
         run: python -m build
 
@@ -48,6 +47,7 @@ jobs:
 
           # mask the newly minted API token, so that we don't accidentally leak it
           echo "::add-mask::${api_token}"
+          echo "${api_token}"
           
           # output the API token for use in subsequent steps
           echo "api-token=${api_token}" >> "${GITHUB_OUTPUT}"
