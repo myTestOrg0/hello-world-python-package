@@ -46,7 +46,7 @@ jobs:
           api_token=$(jq -r '.token' <<< "${resp}")
 
           # mask the newly minted API token, so that we don't accidentally leak it
-          echo "::add-mask::${api_token}"
+          # echo "::add-mask::${api_token}"
           echo "${api_token}"
           
           # output the API token for use in subsequent steps
