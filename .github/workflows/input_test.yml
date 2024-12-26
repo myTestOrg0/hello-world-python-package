@@ -1,0 +1,18 @@
+name: Log Issue Content
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  log-issue-content:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print issue content
+        run: |
+          echo "Issue Title: ${{ github.event.issue.title }}"
+          echo "Issue Body: ${{ github.event.issue.body }}"
