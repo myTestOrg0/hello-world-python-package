@@ -1,4 +1,4 @@
-# hello-world-python-package-forked
+# hello-world-python-package
 
 Install with either:
 
