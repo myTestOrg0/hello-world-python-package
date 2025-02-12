@@ -5,7 +5,9 @@ on:
     branches:
       - main
 
-permissions: {}
+permissions:
+  contents: none
+
 
 jobs:
   publish:
