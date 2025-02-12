@@ -1,5 +1,4 @@
 name: Publish Python Package
-
 on:
   push:
     branches:
@@ -8,9 +7,9 @@ on:
 permissions:
   contents: none
 
-
 jobs:
   publish:
+    environment: release
     runs-on: ubuntu-latest
 
     steps:
