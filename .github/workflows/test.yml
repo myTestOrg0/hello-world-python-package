@@ -1,0 +1,16 @@
+name: Publish Python Package
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: none
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
