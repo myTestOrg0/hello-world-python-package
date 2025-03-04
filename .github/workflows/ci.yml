@@ -1,17 +1,15 @@
 name: Publish Python Package
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
-  publish:
-    environment: release
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-      - uses: actions/checkout@c7d749a2d57b4b375d1ebcd17cfbfb60c676f18e
+    - name: Checkout repository
+      uses: actions/checkout@v2
